@@ -24,8 +24,8 @@ en:
     attributes:
       report:
         today: "Day of report"
-        previous_day: "Previous working day"
+        previous_day: "Day of previous report"
         jelly: "Jelly baby"
-        excited: "I am most excited about"
+        excited: "Most excited about"
         help_needed: "Who can help me?"
       

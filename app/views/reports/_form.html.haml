@@ -26,9 +26,9 @@
         %map{:name => "jelly-map"}
           - jelly_coords.each_with_index do |c,i|
             %area{:coords => c, :id => "jelly-#{i+1}", :shape => "rect"}
-      = f.inputs :name => %q{Previous day's achievements} do
+      = f.inputs :name => %q{Previous achievements} do
         .well
-          Choose the three things you did on your previous working day that you are most proud of.
+          Choose the three things you did on your previous working days that you are most proud of.
           %br
           Everyone achieves more than three things in a day - just pick the top three!
         = f.fields_for :achievements do |achievement|
@@ -42,9 +42,9 @@
             %ol.enumerate
               - @report.previous_day_report.tasks.each do |task|
                 %li= task.text
-      = f.inputs :name => %q{Today's tasks} do
+      = f.inputs :name => %q{Plan tasks} do
         .well
-          Choose the three things you would most like to achieve today.
+          Choose the three things you would most like to achieve before next meeting.
         = f.fields_for :tasks do |task|
           - i = task.index.succ
           .input-group

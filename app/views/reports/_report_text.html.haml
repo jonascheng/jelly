@@ -1,11 +1,11 @@
 .report-text
-  %h2 I am most excited about:
+  %h2 Most excited about:
   %p#excited= markdown report.excited
   %h2= "#{date_text(report.previous_day,report.today).titleize} I achieved:"
   %ol#achievements
     - report.achievements.each do |achievement|
       %li= achievement.text
-  %h2= "Plan to achieve before next meeting:"
+  %h2= "Plan to achieve next meeting:"
   %ol#tasks
     - report.tasks.each do |task|
       %li= task.text

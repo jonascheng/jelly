@@ -18,9 +18,9 @@ module ReportsHelper
     elsif date == reference_date - 1
       "yesterday"
     elsif date > reference_date - 7
-      "on #{date.strftime '%A'}"
+      "#{date.strftime '%A'}"
     else
-      "on #{date.strftime '%e %b'}"
+      "#{date.strftime '%e %b'}"
     end
   end
   

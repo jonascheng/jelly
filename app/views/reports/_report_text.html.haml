@@ -1,7 +1,7 @@
 .report-text
   %h2 Most excited about:
   %p#excited= markdown report.excited
-  %h2= "#{date_text(report.previous_day,report.today).titleize} I achieved:"
+  %h2= "I achieved since #{date_text(report.previous_day,report.today).titleize}:"
   %ol#achievements
     - report.achievements.each do |achievement|
       %li= achievement.text

@@ -52,20 +52,14 @@ class Report < ActiveRecord::Base
   # The report for the previous working day for this user, if there is
   # one (nil otherwise)
   def previous_day_report
-    # Search previous report within 1-week
-    for i in 1..7
+    # Search previous report within 2-week
+    for i in 1..14
       report = Report.where(:today => today.go_back_by_weekdays(i),
           :user_id => user).first
       if !report.nil?
         return report
       end
     end
-    #report = Report.where(:today => today.go_back_by_weekdays(3),
-    #    :user_id => user).first
-    #if report.nil?
-    #  report = Report.where(:today => today.go_back_by_weekdays(2),
-    #      :user_id => user).first
-    #end
     return report
   end
 

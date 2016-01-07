@@ -53,7 +53,7 @@ class Report < ActiveRecord::Base
   # one (nil otherwise)
   def previous_day_report
     # Search previous report within 1-week
-    for i in 1..7
+    for i in 1..1
       report = Report.where(:today => today.go_back_by_weekdays(i),
                    :user_id => user).first
       if !report.nil?

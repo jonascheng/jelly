@@ -60,7 +60,7 @@ class Report < ActiveRecord::Base
     #    return report
     #end
     #return report
-    report = Report.where(:today => today.go_back_by_weekdays(1),
+    report = Report.where(:today => today.go_back_by_weekdays(2),
         :user_id => user).first
     return report
   end

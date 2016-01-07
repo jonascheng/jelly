@@ -64,7 +64,8 @@ class Report < ActiveRecord::Base
         :user_id => user).first
     if report.nil?
       report = Report.where(:today => today.go_back_by_weekdays(2),
-          :user_id => user).first    
+          :user_id => user).first
+    end
     return report
   end
 
